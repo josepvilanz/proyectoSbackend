@@ -20,4 +20,6 @@ public class UsuarioController {
     public String detalle(@PathVariable(name = "id") int id) {
         return "Ficha del usuario " + id;
     }
+
+    
 }

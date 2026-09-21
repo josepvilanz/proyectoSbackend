@@ -1,5 +1,8 @@
 package com.ejemplo.gestor.model;
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 public class Tarea {
 
     private int id;
@@ -8,6 +11,11 @@ public class Tarea {
     private boolean completada;
 
     public Tarea() {
+    }
+
+    @PostMapping
+    public Tarea crear(@RequestBody Tarea tarea) {
+    return tarea;
     }
 
     public Tarea(int id, String titulo, String prioridad, boolean completada) {
